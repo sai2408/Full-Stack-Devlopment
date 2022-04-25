@@ -1,0 +1,52 @@
+VIDEO:
+======
+	Here we can add the video files which play on the window
+	We can play this with and without controls
+		1.with controls
+		2.without controls
+SYNTAX:
+	1.WITH CONTROLS
+	<video width="nn" height="nn" controls>
+  	<source src="file" type="video/mp4">
+  	<source src="file" type="video/ogg">
+	</video>
+	2.WITHOUT CONTROLS
+	<video width="nn" height="nn" autoplay>
+  	<source src="file" type="video/mp4">
+  	<source src="file" type="video/ogg">
+	</video>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body background = "https://wallpaperaccess.com/full/5227230.png">
+     <h4> VIDEO </h4>
+     <video width="320" height="240" autoplay muted>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+
+    </video>
+  </body>
+</html>
+
+DIV:
+====
+	This div is the tag in which seperate set of dentences will be written combinely in window.
+SYNTAX:
+	<div >.....................</div>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body background = "https://wallpaperaccess.com/full/5227230.png">
+     <h4> VIDEO </h4>
+    <div style = "background:green">
+  <h2>This is a heading in a div element</h2>
+  <p>This is some text in a div element.</p>
+</div>
+  </body>
+</html>

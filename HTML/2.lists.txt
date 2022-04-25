@@ -1,0 +1,64 @@
+LISTS:
+=====
+two types:
+	1.Ordered lists
+	2.Unordered lists
+	3.definition (side heading)
+1.Unordered lists:
+----------------------
+SYNTAX:
+	<ul [type="disc"|"square"|"circle"] [compact]>.................</ul>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+      <H3> UNORDERED LISTS </H3>
+      <ul type = "disc">
+        <li>sai</li>
+        <li>Vardhan</li>
+      </ul>
+  </body>
+</html>
+2.Ordered list:
+-----------------
+SYNTAX:
+	<ol type="1"|"a"|"B"|"i"|"I"] [start="n"] [compact]>.......................</ol>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+      <H3> UNORDERED LISTS </H3>
+      <OL start = "1">
+        <li>sai</li>
+        <li>Vardhan</li>
+      </ol>
+  </body>
+</html>
+3.Definintion:
+-----------------
+SYNTAX:
+	<dl [compact]>...........</dl>
+		<dt>..................</dt>
+			<dd>..................</dd>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+     <h2>definition</h2>
+     <dl>
+       <dt>sai</dt>
+        <dd>First name of the person</dd>
+        <dt>vardhan</dt>
+          <dd>Second name of the person</dd>
+     </dl>
+  </body>
+</html>

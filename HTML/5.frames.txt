@@ -1,0 +1,25 @@
+FRAMES:
+=======
+We can use the multiple browsers in a single window
+SYNTAX:
+	<frameset [cols="%,%"] [rows="%,%"]>..........</frames>
+			or
+	<frame [name="name"] src = "filename" [scrolling="yes"|"no"] [frameborder="0"|"1"]>
+			or
+	<a herf = "url" target="n">
+We can use the frames inside the html page by the attribute target
+	1.self
+	2.blank
+	3.parent
+	4.top
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body background = "https://wallpaperaccess.com/full/5227230.png">
+     <h4> FRAME</h4>
+     <iframe src="https://www.w3schools.com" title="W3Schools Free Online Web Tutorials" >
+  </body>
+</html>

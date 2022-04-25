@@ -1,0 +1,15 @@
+OBJECT:
+======
+	Used to embed multimedia objects directly into the page.
+SYNTAX:
+	< object classid="url" data = "url" [codebase="url"] typr = "string" [standby="string"] height="n" width="n" [title="string"]>..................</object>
+	<param name="string" value="string" type="string" valuetype=["ref"|"object"|"data"]>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<object data="movie.mp4" width="400" height="300"></object>
+ 
+</body>
+</html>

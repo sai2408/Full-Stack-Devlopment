@@ -1,0 +1,72 @@
+IMAGES :
+=======
+	We can insert images of .png,.jpg,.gif formats
+SYNTAX:
+	FOR BODY:
+		<body background = "url">
+	IN BODY:
+		1.<img src = "url"|"name" height="n" width="n" [alt="string"] [align="top"|"center"|"bottom"] [usemap="url"]>
+		2.<a href = "url">text message</a>(ANCHOR TAG)
+		   <a href="url"><img src="url"></a>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body background = "https://wallpaperaccess.com/full/5227230.png">
+     <h2>IMAGES</h2>
+     <img src = "https://as1.ftcdn.net/v2/jpg/01/75/66/98/1000_F_175669884_vnanaCgwsszTdBDvf8tmUoO1vE8mQ3yB.jpg" height="50" width="50">
+     <BR><a href = "https://www.w3schools.com/html/default.asp">HTML</a><BR>
+     <a href="https://www.w3schools.com/html/default.asp"><img src ="https://as1.ftcdn.net/v2/jpg/01/75/66/98/1000_F_175669884_vnanaCgwsszTdBDvf8tmUoO1vE8mQ3yB.jpg" width = "50" height = "50" </a>
+     
+  </body>
+</html>
+
+FORMS:
+======
+	This is used to add an element of interactivity to web site
+SYNTAX:
+	 <form action = "url" method="post"|"get">..............</form>
+	<input type="text"|"password"|"checkbox"|"radio"|"submit"|"reset"|"button"|"image" name = "string" [value="string"] [checked] [size="n"] [maxlength="n"] [src = "url"] [align = "top"|"middle"|"bottom"|"left"|"right"]>
+						OR
+	<label for="fname">First name:</label><br>
+  	<input type="text" id="fname" name="fname">
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body background = "https://wallpaperaccess.com/full/5227230.png">
+     <h2>FORMS</h2>
+     <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname">
+      <br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname">
+      
+      <!--radio-->
+      <br>
+      <h4> Select any one</h4>
+      <input type = "radio" id ="html" name="favlang" value="HTML">
+      <label for="html">HTML</label>
+      <BR>
+      <input type = "radio" id ="css" name="favlang" value="CSS">
+      <label for="css">CSS</label>
+      
+      <!--CHECK BOX -->
+      <br><h4>vehicles you have</h4>
+      <input type = "checkbox" id = "v1" name="v1" value="car">
+      <label for="v1">Car</label><br>
+      <input type = "checkbox" id = "v2" name = "v2" value="bike">
+      <label for="v2">Bike</label>
+      <br>
+      
+      <!-- submit -->
+      <input type = "submit" value = "submit">
+     </form>
+     
+  </body>
+</html>
