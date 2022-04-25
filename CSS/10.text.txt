@@ -1,0 +1,27 @@
+CSS TEXT:
+========
+	This property is used to do the decorations for the text
+	1.text color	(color:blue;)
+	2.text alignment
+		text-align : center
+		text-align : left
+		text-align :right
+		text-align : justify
+	3.text decoration
+		text-decoration-line : underline
+		text-decoration-line : overline
+		text-decoration-color : blue
+		text-decoration-style : solid
+		text-decoration-thickness : px,%,auto,etc,..
+	4.text-transformation
+		text-transform:uppercase
+		text-transform : lowercase
+		text-transform : capitalize
+	5.text spacing
+		text-indent : px
+		letter-spacing : px,-px,
+		line-height : 0.8,etc,..
+		word-spacing : px,-px 
+		white-space : nowrap
+	5.text-shadow : horizontal_shadow vertical_shadow color
+		text-shadow : 2px 2px red

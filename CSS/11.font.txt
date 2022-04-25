@@ -1,0 +1,44 @@
+
+CSS FONTS:
+=========
+	This property is used to display the text with different font styles.
+	SYNTAX:
+		font-family : name
+	1.Font family:
+		There are five generic font families
+			1.serif
+			2.sans-serif
+			3.monospace
+			4.cursive
+			5.fantasy
+	2.web safe fonts:
+		fonts that are universally install accross all the browsers and devices.
+			1.verdana
+			2.arial
+			3.hevetica
+			4.times new roman
+			5.georgia
+			6.courier new
+			7.brush script mt
+	3.font style:
+		There are totally 3 types of styles:
+			1.normal
+			2.italic
+			3.oblique
+				font-style : normal
+				font-style : italic
+				font-style : oblique
+
+	4.font weight:
+		There are totally two types of weights
+			font-weight : normal
+			font-weight : bold
+	5.font variant
+		This property specifies weather or not a text should be displayed in a small-caps font
+		font-variant : normal
+		font-variant : small-caps
+	6.font size:
+		font-size : px,em,etc,...
+	7.Google fonts:
+		We can use the fonts which are in thee google by using the ref
+		<link rel="stylesheets: href="https://fonts.googleapis.com/css?family=Sofia">

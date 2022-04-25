@@ -1,0 +1,212 @@
+CSS BACKGROUNDS:
+=================
+There ae various backgrounds like:
+	1.background-color
+	2.background-image
+	3.background-repeat
+	4.background-attachment
+	5.background-position
+	6.background-shorthand
+1.background-color:
+-------------------------
+The  background colour of the body will be added.
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+  background-color: green;
+}
+
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+
+<h1>Transparent Boxes</h1>
+
+<p>When using the opacity property to add transparency to the background of an element, all of its child elements become transparent as well. This can make the text inside a fully transparent element hard to read:</p>
+
+<div class="first">
+  <h1>opacity 0.1</h1>
+</div>
+
+<div class="second">
+  <h1>opacity 0.3</h1>
+</div>
+
+<div class="third">
+  <h1>opacity 0.6</h1>
+</div>
+
+<div>
+  <h1>opacity 1 (default)</h1>
+</div>
+
+</body>
+</html>
+
+
+2.background-image:
+---------------------------
+The background-image property specifies an image to use as the background of an element.
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+  background-image: url("paper.gif");
+}
+</style>
+</head>
+<body>
+
+<h1>Hello World!</h1>
+
+<p>This paragraph has an image as the background!</p>
+
+</body>
+</html>
+
+
+3.background-repeat:
+---------------------------
+By default, the background-image property repeats an image both horizontally and vertically.
+	--repeate-x		-If the image above is repeated only horizontally
+	--repeate-y		-If the image above is repeated only vertically
+	--no-repeat		-If the image above is not repeated.
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("img_tree.png");
+  background-repeat: repeat-y;
+}
+</style>
+</head>
+<body>
+
+<h1>Hello World!</h1>
+<p>W3Schools background image example.</p>
+<p>The background image only shows once, but it is disturbing the reader!</p>
+
+</body>
+</html>
+
+
+4. background-attachment:
+This specifies whether the background image should scroll or be fixed.
+	--fixed
+	--scroll
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  margin-right: 200px;
+  background-attachment: scroll;
+}
+</style>
+</head>
+<body>
+
+<h1>The background-attachment Property</h1>
+
+<p>The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page).</p>
+
+<p><strong>Tip:</strong> If you do not see any scrollbars, try to resize the browser window.</p>
+
+<p>The background-image scrolls. Try to scroll down the page.</p>
+<p>The background-image scrolls. Try to scroll down the page.</p>
+<p>The background-image scrolls. Try to scroll down the page.</p>
+<p>The background-image scrolls. Try to scroll down the page.</p>
+
+</body>
+</html>
+
+5.background-position
+This specify the position of the image inserted in the browser page.
+	
+	-left top
+	-left center
+	-left bottom
+	-right top
+	-right center
+	-right bottom
+	-center top
+	-center center
+	-center bottom
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-right: 200px;
+  background-attachment: scroll;
+}
+</style>
+</head>
+<body>
+
+<h1>The background-attachment Property</h1>
+
+<p>The background-attachment property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page).</p>
+
+<p><strong>Tip:</strong> If you do not see any scrollbars, try to resize the browser window.</p>
+
+<p>The background-image scrolls. Try to scroll down the page.</p>
+<p>The background-image scrolls. Try to scroll down the page.</p>
+<p>The background-image scrolls. Try to scroll down the page.</p>
+<p>The background-image scrolls. Try to scroll down the page.</p>
+
+
+</body>
+</html>
+
+6.background-shorthand
+This can be possible to specify all the background properties in one single property.
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background:  tomato url("img_tree.png") no-repeat right top;
+  margin-right: 200px;
+}
+</style>
+</head>
+<body>
+
+<h1>The background Property</h1>
+
+<p>The background property is a shorthand property for specifying all the background properties in one declaration.</p>
+
+<p>Here, the background image is only shown once, and it is also positioned in the top-right corner.</p>
+
+<p>We have also added a right margin, so that the text will not write over the background image.</p>
+
+</body>
+</html>

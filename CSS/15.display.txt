@@ -1,0 +1,27 @@
+CSS DSIPLAY:
+===========
+	This is very important in the css.
+	1.block level
+		<div>
+		<h1>....</h1>
+		<p>
+		<form>
+		<header>
+		<footer>
+		<section>
+	2.inline	
+		<span>	
+		<a>
+		<img>
+1.span:
+---------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The span element</h1>
+
+<p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+</body>
+</html>
