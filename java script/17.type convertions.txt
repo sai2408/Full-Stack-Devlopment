@@ -1,0 +1,95 @@
+TYPE CONERTIONS IN JAVA SCRIPT:
+============================
+1.Converting Strings to Numbers
+2.Converting Numbers to Strings
+3.Converting Dates to Numbers
+4.Converting Numbers to Dates
+5.Converting Booleans to Numbers
+6.Converting Numbers to Booleans
+
+NUMBER METHODS:
+================
+1.number()
+2.parseInt()
+3.parseFloat()
+
+UNARY + OPERATIOR:
+=================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable or expression:</p>
+
+<p id="demo"></p>
+
+<script>
+let y = "5";
+let x = + y;
+document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
+</script>
+
+</body>
+</html>
+
+
+NUMBERS TO STRINGS:
+===================
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript String() Method</h2>
+
+<p>The String() method can convert a number to a string.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 123;
+document.getElementById("demo").innerHTML =
+  String(x) + "<br>" +
+  String(123) + "<br>" +
+  String(100 + 23);
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number Methods</h2>
+
+<p>The toString() method converts a number to a string.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 123;
+document.getElementById("demo").innerHTML =
+  x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+</script>
+
+</body>
+</html>
+
+DATE TO NUMBERS:
+================
+d = new Date();
+Number(d)          // returns 1404568027739
+
+DATE TO STRING:
+==============
+1.String(Date())  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+2.Date().toString()  // returns "Thu Jul 17 2014 15:38:19 GMT+0200 (W. Europe Daylight Time)"
+
+BOOLEAN TO NUMBERS:
+===================
+Number(false)     // returns 0
+Number(true)      // returns 1
+

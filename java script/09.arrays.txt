@@ -1,0 +1,493 @@
+JAVA SCRIPT ARRAYS:
+==================
+--Array methods
+--array sort
+--array iteration
+--array const
+
+CREATION OF ARRAY:
+-------------------------------
+const array_name = [item1, item2, ...];     
+Spaces and line breaks are not importan
+example:
+const cars = ["Saab", "Volvo", "BMW"];
+const person = ["John", "Doe", 46];
+
+You can also create an array, and then provide the elements
+example:
+const cars = [];
+cars[0]= "Saab";
+cars[1]= "Volvo";
+cars[2]= "BMW";
+
+using java script keyword NEW :
+------------------------------------------
+const cars = new Array("Saab", "Volvo", "BMW");
+
+Accessing array elements:
+--------------------------------
+const cars = ["Saab", "Volvo", "BMW"];
+let car = cars[0];
+
+changing an array elemnts:
+-----------------------------------
+const cars = ["Saab", "Volvo", "BMW"];
+cars[0] = "Opel";
+
+Access the full array:
+---------------------------
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("demo").innerHTML = cars;
+
+Arrays with objects:
+-------------------------
+const person = {firstName:"John", lastName:"Doe", age:46};
+==>person.firstname
+
+Array elements can be objects:
+--------------------------------------
+myArray[0] = Date.now;
+myArray[1] = myFunction;
+myArray[2] = myCars;
+
+Access last element:
+------------------------
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fruit = fruits[fruits.length - 1];
+
+Looping array elements:
+---------------------------------
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let fLen = fruits.length;
+
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+---------------------------------------------------------------------------------------
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+}
+
+Adding array elemnts:
+----------------------------
+const fruits = ["Banana", "Orange", "Apple"];
+fruits.push("Lemon");  // Adds a new element (Lemon) to fruits
+
+const fruits = ["Banana", "Orange", "Apple"];
+fruits[6] = "Lemon";  // Creates undefined "holes" in fruits
+
+
+ARRAY METHODS:
+===============
+1.convering arrays to strings
+2.join method
+3.popping
+4.pushing
+5.shifting elements
+	i.shift
+	ii.unshift
+
+1.CONVERTING ARRAYS TO STRINGS:
+---------------------------------------------------------
+converts an array to a string of (comma separated) array values.
+example:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+
+2.JOIN METHOS:
+--------------------------
+method also joins all array elements into a string.
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+3.POPPING:
+----------------
+method removes the last element from an array
+example:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+
+4.PUSHING:
+----------------
+method adds a new element to an array (at the end):
+example:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+
+5.SHIFTING ELEMENTS:
+------------------------------------
+1.array shift
+2.array unshift
+
+1.ARRAY SHIFT():
+--------------------------
+method removes the first array element and "shifts" all other elements to a lower indeX
+example:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+2.ARRAY UNSHIFT():
+--------------------------------
+ method adds a new element to an array (at the beginning), and "unshifts" older elements
+Example:
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");
+
+
+ARRAY SORTING:
+==============
+The sorting mehod will be used by using the method  called sort()
+==>reversing an array
+==>numeric sort
+==>sorting array in random order
+==>using math.max() function
+==>using math.min() fucntion
+==>sorting object arrays
+example:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+<p>The sort() method sorts an array alphabetically:</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo1").innerHTML = fruits;
+
+fruits.sort();
+document.getElementById("demo2").innerHTML = fruits;
+</script>
+
+</body>
+</html>
+
+==>REVERSING AN ARRAY:
+-----------------------------------------
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+fruits.reverse();
+
+==>NUMERIC SORT:
+-----------------------------
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return a - b});
+
+==>SORTING ARRAY IN RANDOM ARRAY:
+--------------------------------------------------------------
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b){return 0.5 - Math.random()});
+
+==>USING MATH.MAX():
+-----------------------------------
+function myArrayMax(arr) {
+  return Math.max.apply(null, arr);
+}
+
+==>USING MATH.MIN():
+----------------------------------
+function myArrayMin(arr) {
+  return Math.min.apply(null, arr);
+}
+
+==>SORTING OBJECT ARRAYS:
+----------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array Sort</h2>
+<p>Sort car objects on age:</p>
+
+<p id="demo"></p>
+
+<script>
+const cars = [
+  {type:"Volvo", year:2016},
+  {type:"Saab", year:2001},
+  {type:"BMW", year:2010}
+];
+
+displayCars();
+
+cars.sort(function(a, b){return a.year - b.year});
+displayCars();
+
+function displayCars() {
+  document.getElementById("demo").innerHTML =
+  cars[0].type + " " + cars[0].year + "<br>" +
+  cars[1].type + " " + cars[1].year + "<br>" +
+  cars[2].type + " " + cars[2].year;
+}
+</script>
+
+</body>
+</html>
+
+
+ARRAY ITERATION:
+===============
+This iteration methods operate on evert array item.
+--for each
+--array map
+--array filter
+--array reduce
+--array reduceright
+--array every
+--array some
+--array indexof
+--array lastindexof
+--array find
+--array findindex
+--array.form
+--array keys
+
+==>JAVA SCRIPT ARRAY FOREACH():
+---------------------------------------------------------
+ method calls a function (a callback function) once for each array element.
+the function takes 3 arguments:
+	-The item value
+	-The item index
+	-The array itself
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+
+==>ARRAY MAP:
+-------------------------
+The map() method creates a new array by performing a function on each array element.
+The map() method does not execute the function for array elements without values.
+The map() method does not change the original array.
+example:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.map()</h2>
+<p>Creates a new array by performing a function on each array element.</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFunction);
+
+document.getElementById("demo").innerHTML = numbers2;
+
+function myFunction(value, index, array) {
+  return value * 2;
+}
+</script>
+
+</body>
+</html>
+
+==>ARRAY FILTER:
+----------------------------
+method creates a new array with array elements that passes a test.
+const numbers = [45, 4, 9, 16, 25];
+const over18 = numbers.filter(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+==>ARRAY REDUCE:
+------------------------------
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+The reduce() method works from left-to-right in the array. See also reduceRight().
+that the function takes 4 arguments:
+
+The total (the initial value / previously returned value)
+	-The item value
+	-The item index
+	-The array itself
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.reduce()</h2>
+<p>This example finds the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html>
+
+==>REDUCE RIGHT:
+--------------------------------
+The reduceRight() method runs a function on each array element to produce (reduce it to) a single value.
+The reduceRight() works from right-to-left in the array. See also reduce().
+The reduceRight() method does not reduce the original array.
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.reduceRight()</h2>
+<p>This example finds the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduceRight(myFunction);
+
+document.getElementById("demo").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html>
+
+==>ARRAY EVERY:
+----------------------------
+The every() method check if all array values pass a test.
+This example check if all array values are larger than 18:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.every()</h2>
+<p>The every() method checks if all array values pass a test.</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let allOver18 = numbers.every(myFunction);
+
+document.getElementById("demo").innerHTML = "All over 18 is " + allOver18;
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+</script>
+
+</body>
+</html>
+
+==>ARRAY SOME:
+----------------------------
+The some() method check if some array values pass a test.
+const numbers = [45, 4, 9, 16, 25];
+let someOver18 = numbers.some(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+==>ARRAY INDEXOF:
+---------------------------------
+The indexOf() method searches an array for an element value and returns its position.
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.indexOf("Apple") + 1;
+
+==>ARRAY LAST INDEX OF:
+-----------------------------------------
+Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+const fruits = ["Apple", "Orange", "Apple", "Mango"];
+let position = fruits.lastIndexOf("Apple") + 1;
+
+==>ARRAY FIND:
+-------------------------
+The find() method returns the value of the first array element that passes a test function.
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+==>ARRAY FINDINDEX:
+------------------------------------
+The findIndex() method returns the index of the first array element that passes a test function.
+const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+
+function myFunction(value, index, array) {
+  return value > 18;
+}
+
+==>ARRAY.FRM():
+-----------------------------
+The Array.from() method returns an Array object from any object with a length property or any iterable object.
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>The Array.from() method returns an Array object from any object with a length property or any iterable object.</p>
+
+<p id="demo"></p>
+
+<script>
+const myArr = Array.from("ABCDEFG");
+document.getElementById("demo").innerHTML = myArr;
+</script>
+
+<p>The Array.from() method is not supported in Internet Explorer.</p>
+
+</body>
+</html>
+
+==>ARRAY KAEYS:
+----------------------------
+The Array.keys() method returns an Array Iterator object with the keys of an array.
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+
+for (let x of keys) {
+  text += x + "<br>";
+}
+
+
+

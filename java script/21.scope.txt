@@ -1,0 +1,64 @@
+JAVA SCRIPT SCOPES:
+=================
+JavaScript has 3 types of scope:
+1.Block scope
+2.Function scope
+3.Global scope
+
+1.BLOCK SCOPE:
+-------------------------
+Variables declared inside a { } block cannot be accessed from outside the block:
+{
+  let x = 2;
+}
+// x can NOT be used here
+
+{
+  var x = 2;
+}
+// x CAN be used here
+
+2.LOCAL SCOPE:
+------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Scope</h2>
+
+<p><b>carName</b> is undefined outside myFunction():</p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<script>
+myFunction();
+
+function myFunction() {
+  let carName = "Volvo";
+  document.getElementById("demo1").innerHTML = typeof carName + " " + carName;
+}
+
+document.getElementById("demo2").innerHTML = typeof carName;
+</script>
+
+</body>
+</html>
+
+3.FUNCTION SCOPE:
+--------------------------------
+Variables declared with var, let and const are quite similar when declared inside a function.
+
+They all have Function Scope:
+function myFunction() {
+  var carName = "Volvo";   // Function Scope
+}
+
+function myFunction() {
+  let carName = "Volvo";   // Function Scope
+}
+
+function myFunction() {
+  const carName = "Volvo";   // Function Scope
+}

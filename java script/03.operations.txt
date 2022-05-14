@@ -1,0 +1,68 @@
+JAVA SCRIPT OPERATORS:
+=====================
+1.assignment
+3.arithmetic
+
+
+1.Assignmnt:
+-----------------
+Assignment operator consists of equal symbol "="
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Operators</h2>
+<h3>The = Operator</h3>
+
+<p id="demo"></p>
+
+<script>
+let x = 10;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>
+
+== assigns the value to the variable
+	let x = 10;
+==adds the value to the variable
+	let x = 10;
+	x += 5;
+==subtracts the value from the varaible
+	let x = 10;
+	x -= 5;
+==multiplies a variable
+	let x = 5;
+	x *= 5;
+==divides the vaariable
+	let x=10;
+	x /= 5;
+==assigns a remainder to the variable
+	let x = 10;
+	x %= 5;
+
+2.Arithmetic:
+-----------------
+	--addition(+)
+		let x = 100 + 50;
+	--subtraction(-)
+		let z = x - y;
+	--multiplication(8)
+		let z = x * y;
+	--exponential(**)
+		let z = x ** 2; 
+		let z = Math.pow(x,2);
+	--division(/)
+		let z = x / y;
+	--moduls(%)
+		let z = x % y;
+	--increment(++)
+		let x = 5;
+		x++;
+	--decrement(--)
+		let x = 5;
+		x--;
+EXAMPLE OF ADDITION OF TWO  NUMBERS:
+--------------------------------------------------------------------

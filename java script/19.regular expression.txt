@@ -1,0 +1,105 @@
+JAVA SCRIPT REGULAR EXPRESSIONS
+==============================
+A regular expression is a sequence of characters that forms a search pattern.
+
+USING STRING METHODS:
+---------------------------------------
+In JavaScript, regular expressions are often used with the two string methods: search() and replace().
+The search() method uses an expression to search for a match, and returns the position of the match.
+The replace() method returns a modified string where the pattern is replaced.
+
+USING STRING SEARCH:
+-------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Search a string for "W3Schools", and display the position of the match:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Visit W3Schools!"; 
+let n = text.search("W3Schools");
+document.getElementById("demo").innerHTML = n;
+</script>
+
+</body>
+</html>
+
+
+USING SEARCH WITH REGULAR EXPRESSION:
+-----------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p>Search a string for "w3Schools", and display the position of the match:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "Visit W3Schools!"; 
+let n = text.search(/w3Schools/i);
+document.getElementById("demo").innerHTML = n;
+</script>
+
+</body>
+</html>
+
+USING STRING REPLACE:
+--------------------------------------
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+</script>
+
+</body>
+</html>
+
+
+USING STRING REPLACE WITH REGULAR EXPRESSION:
+------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace(/microsoft/i, "W3Schools");
+}
+</script>
+
+</body>
+</html>

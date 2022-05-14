@@ -1,0 +1,56 @@
+JSON(java script object notation) IN JAVA SCRIPT:
+====================================
+SYNTAX RULES:
+=============
+1.Data is in name/value pairs
+2.Data is separated by commas
+3.Curly braces hold objects
+4.Square brackets hold arrays
+
+JSON DATA :
+-----------------
+JSON data is written as name/value pairs
+"firstName":"John"
+
+JSON OBJECTS:
+----------------------
+JSON objects are written inside curly braces.
+{"firstName":"John", "lastName":"Doe"}
+
+JSON ARRAYS:
+---------------------
+JSON arrays are written inside square brackets.
+"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]
+
+CONVERTING  JSON TEXT TO JAVA SCRIPT OBJECT:
+-------------------------------------------------------------------------------
+JavaScript built-in function JSON.parse() to convert the string into a JavaScript object.
+const obj = JSON.parse(text);
+
+EXAMPLE:
+---------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+obj.employees[1].firstName + " " + obj.employees[1].lastName;
+</script>
+
+</body>
+</html>

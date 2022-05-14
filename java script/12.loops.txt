@@ -1,0 +1,211 @@
+LOOPS IN JAVA SCRIPT:
+==================
+1.for
+2.for/in
+3.foreach()
+4.for/of
+5.while
+6.do/while
+
+1.FOR:
+---------
+SYNTAX:
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+Statement 1 is executed (one time) before the execution of the code block.
+
+Statement 2 defines the condition for executing the code block.
+
+Statement 3 is executed (every time) after the code block has been executed.
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+2.FOR/IN:
+-------------
+SYNTAX:
+for (key in object) {
+  // code block to be executed
+}
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For In Loop</h2>
+<p>The for in statement loops through the properties of an object:</p>
+
+<p id="demo"></p>
+
+<script>
+const person = {fname:"John", lname:"Doe", age:25}; 
+
+let txt = "";
+for (let x in person) {
+  txt += person[x] + " ";
+}
+
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+</body>
+</html>
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For In</h2>
+<p>The for in statement can loops over array values:</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x] + "<br>"; 
+}
+
+document.getElementById("demo").innerHTML = txt;
+</script>
+
+</body>
+</html>
+
+3.FOREACH:
+-------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array.forEach()</h2>
+<p>Calls a function once for each array element.</p>
+
+<p id="demo"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("demo").innerHTML = txt;
+
+function myFunction(value, index, array) {
+  txt += value + "<br>"; 
+}
+</script>
+
+</body>
+</html>
+
+4.FOR/OF:
+--------------
+SYNTAX:
+for (variable of iterable) {
+  // code block to be executed
+}
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For Of Loop</h2>
+<p>The for of statement loops through the values of any iterable object:</p>
+
+<p id="demo"></p>
+
+<script>
+const cars = ["BMW", "Volvo", "Mini"];
+
+let text = "";
+for (let x of cars) {
+  text += x + "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+5.WHILE:
+-------------
+SYNTAX:
+while (condition) {
+  // code block to be executed
+}
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript While Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = "";
+let i = 0;
+while (i < 10) {
+  text += "<br>The number is " + i;
+  i++;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+6.DO WHILE:
+-------------------
+SYNTAX:
+do {
+  // code block to be executed
+}
+while (condition);
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Do While Loop</h2>
+
+<p id="demo"></p>
+
+<script>
+let text = ""
+let i = 0;
+
+do {
+  text += "<br>The number is " + i;
+  i++;
+}
+while (i < 10);  
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+

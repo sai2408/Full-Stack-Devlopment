@@ -1,0 +1,135 @@
+JAVA SCRIPT NUMBERS:
+===================
+=>Numbers can be written with or without decimals.
+example:
+let x = 3.14;
+let y = 3;  
+
+=>JavaScript Numbers are Always 64-bit Floating Point
+
+==>Integer Precision:
+---------------------------
+Integers are accurate up to 15 digits
+example:
+let x = 999999999999999;   // x will be 999999999999999
+let y = 9999999999999999;  // y will be 10000000000000000
+
+==>Floating Precision:
+------------------------------
+Floating point arithmetic is not always 100% accurate
+example:
+let x = 0.2 + 0.1;	//0.30000000000000004
+
+JAVA SCRIPT NUMBER METHODS:
+===========================
+1.to string()
+2.toexponential()
+3.tofixed()
+4.toprecision()
+5.valueof()
+
+1.TOSTRING():
+---------------------
+returns a number as a string.
+let x = 123;
+x.toString();
+(123).toString();
+(100 + 23).toString();
+
+2.TOEXPONENTIAL:
+-----------------------------
+returns a string with a number rounded and written using exponential.
+example:
+let x = 9.656;
+x.toExponential(2);
+x.toExponential(4);
+x.toExponential(6);
+
+3.TOFIXED():
+------------------
+returns a string, with the number written with a specified number of decimals.
+example:
+let x = 9.656;
+x.toFixed(0);
+x.toFixed(2);
+x.toFixed(4);
+x.toFixed(6);
+
+4.TOPRECISION():
+-------------------------
+returns a string, with a number written with a specified length
+example:
+let x = 9.656;
+x.toPrecision();
+x.toPrecision(2);
+x.toPrecision(4);
+x.toPrecision(6);
+
+5.VALUEOF():
+--------------------
+returns a number as a number.
+example:
+let x = 123;
+x.valueOf();		//123
+(123).valueOf();		//123
+(100 + 23).valueOf();		//123
+
+
+CONVERTING VARIABLES TO NUMBERS:
+================================
+1.number()
+2.parseint()
+3.parsefloat()
+
+1.NUMBER():
+-------------------
+Returns a number, converted from its argument.
+example:
+  Number(true) + "<br>" +//1
+  Number(false) + "<br>" +//0
+  Number("10") + "<br>" + //10
+  Number("  10") + "<br>" +//10
+  Number("10  ") + "<br>" +//10
+  Number(" 10  ") + "<br>" +//10
+  Number("10.33") + "<br>" + //10.33
+  Number("10,33") + "<br>" +//NaN
+  Number("10 33") + "<br>" +//NaN
+  Number("John");//NaN
+
+2.PARSEINT():
+--------------------
+	Parses its argument and returns an integer
+example:
+parseInt("-10");//-10
+parseInt("-10.33");//-10
+parseInt("10");//10
+parseInt("10.33");//10
+parseInt("10 20 30");//10
+parseInt("10 years");//10
+parseInt("years 10");NaN
+
+3.PARSEFLOAT():
+-------------------------
+Parses its argument and returns a floating point number
+example:
+parseFloat("10");//10
+parseFloat("10.33");//10.33
+parseFloat("10 20 30");//10
+parseFloat("10 years");//10
+parseFloat("years 10");NaN
+
+NUMBER PROPERTIES:
+==================
+
+
+1.MAXVALUE():
+----------------------
+returns largest possible number in java script
+example:
+let x = Number.MAX_VALUE;
+
+2.MINVALUE():
+----------------------
+returns the lowest possible number in JavaScript.
+exmaple:
+let x = Number.MIN_VALUE;

@@ -1,0 +1,71 @@
+TYPE OF IN JAVA SCRIPT:
+=====================
+In JavaScript there are 5 different data types that can contain values:
+1.string
+2.number
+3.boolean
+4.object
+5.function
+There are 6 types of objects:
+1.Object
+2.Date
+3.Array
+4.String
+5.Number
+6.Boolean
+2 data types that cannot contain values:
+1.null
+2.undefined
+
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable, object, function or expression.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+  typeof NaN + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34} + "<br>" +
+  typeof new Date() + "<br>" +
+  typeof function () {} + "<br>" +
+  typeof myCar + "<br>" +
+  typeof null;
+</script>
+
+</body>
+</html>
+
+
+PRIMITIVE DATA:
+==============
+1.string
+2.number
+3.boolean
+4.undefined
+EXAMPLE:
+typeof "John"              // Returns "string"
+typeof 3.14                // Returns "number"
+typeof true                // Returns "boolean"
+typeof false               // Returns "boolean"
+typeof x                   // Returns "undefined" (if x has no value)
+
+COMPLEX DATA:
+=============
+1.function
+2.object
+
+EXAMPLE:
+typeof {name:'John', age:34} // Returns "object"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof null                  // Returns "object"
+typeof function myFunc(){}   // Returns "function"

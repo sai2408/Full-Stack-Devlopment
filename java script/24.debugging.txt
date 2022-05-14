@@ -1,0 +1,46 @@
+JAVA SCRIPT DEBUGGING
+=====================
+CONSOLE.LOG() :
+--------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My First Web Page</h2>
+
+<p>Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.</p>
+
+<script>
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+</script>
+
+</body>
+</html> 
+
+SETTING BREAK POINTS:
+--------------------------------------
+The debugger keyword stops the execution of JavaScript, and calls (if available) the debugging function.
+This has the same function as setting a breakpoint in the debugger.
+If no debugging is available, the debugger statement has no effect.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Debugger</h2>
+
+<p id="demo"></p>
+
+<p>With the debugger turned on, the code below should stop executing before it executes the third line.</p>
+
+<script>
+let x = 15 * 5;
+debugger;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+</body>
+</html>

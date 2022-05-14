@@ -1,0 +1,408 @@
+JAVASCRIPT STRINGS:
+==================
+\'	==>	insert single quote
+\"	==> 	insert double quote
+\\	==>	insert back slash
+--string methods
+--string search methods
+--string tamplete
+
+STRING METHODS:
+===============
+1.length
+2.slicing
+3.substring
+4.replace
+5.upper case
+6.lower case
+7.concatination
+8.trim
+9.padding
+
+1.LENGTH:
+-----------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Properties</h2>
+
+<p>The length property returns the length of a string:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+</script>
+
+</body>
+</html>
+
+2.SLICING:
+---------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The slice() method extract a part of a string
+and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+let str = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.slice(7,13); 
+document.getElementById("demo").innerHTML = str.slice(-12,-6);
+</script>
+
+</body>
+</html>
+
+
+3.SUBSTRING:
+----------------------
+The difference is that start and end values less than 0 are treated as 0 in substring().
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The substring() method extract a part of a string and returns the extracted parts in a new string:</p>
+
+<p id="demo"></p>
+
+<script>
+let str = "Apple, Banana, Kiwi";
+document.getElementById("demo").innerHTML = str.substring(7,13);
+</script>
+
+</body>
+</html>
+
+4.REPLACE:
+-----------------
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+</script>
+
+</body>
+</html>
+
+5.UPPER CASE:
+---------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Hello World!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+6.LOWER CASE:
+------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+<p>Convert string to upper case:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Hello World!</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.toLowerCase();
+}
+</script>
+
+</body>
+</html>
+
+7.CONCATINATION:
+-----------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The concat() method joins two or more strings:</p>
+
+<p id="demo"></p>
+
+<script>
+let text1 = "Hello";
+let text2 = "World!";
+let text3 = text1.concat(" ",text2);
+document.getElementById("demo").innerHTML = text3;
+</script>
+
+</body>
+</html>
+
+
+8.TRIMMING:
+-------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The trim() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+let text1 = "     Hello World!     ";
+let text2 = text1.trim();
+
+document.getElementById("demo").innerHTML =
+"Length text1=" + text1.length + "<br>Length2 text2=" + text2.length;
+</script>
+
+</body>
+</html>
+
+9.PADDING:
+------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The padStart() method pads a string with another string:</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "EHR";
+document.getElementById("demo").innerHTML = text.padStart(4,"x");
+</script>
+
+</body>
+</html>
+
+
+STRING SEARCH METHODS:
+=======================
+1.string indexof()
+2.string lastindesof()
+3.string startswith()
+4.string endswith()
+5.includes()
+
+1.STRING INDEXOF():
+--------------------------------
+	 Returns the index of (the position of) the first occurrence of a specified text in a string:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The indexOf() method returns the position of the first occurrence of a specified text:</p>
+
+<p id="demo"></p>
+
+<script>
+let str = "Please locate where 'locate' occurs!";
+document.getElementById("demo").innerHTML = str.indexOf("locate");
+</script>
+
+</body>
+</html>
+
+2.STRING LASTINDEXOF():
+-----------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Methods</h2>
+
+<p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+
+<p id="demo"></p>
+
+<script>
+let str = "Please locate where 'locate' occurs!";
+document.getElementById("demo").innerHTML = str.lastIndexOf("locate");
+</script>
+
+</body>
+</html>
+
+3.STRING STARTSWITH():
+-------------------------------------
+	Returns true or false
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>Check if a string starts with "Hello":</p>
+
+<p id="demo"></p>
+
+<p>The startsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+let text = "Hello world, welcome to the universe.";
+document.getElementById("demo").innerHTML = text.startsWith("Hello");
+</script>
+
+</body>
+</html>
+
+4.STRING ENDSWITH():
+------------------------------------
+	Returns true or false
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings</h2>
+
+<p>Check if a string ends with "Doe":</p>
+
+<p id="demo"></p>
+
+<p>The endsWith() method is not supported in Internet Explorer.</p>
+
+<script>
+let text = "John Doe";
+document.getElementById("demo").innerHTML = text.endsWith("Doe");
+</script>
+
+</body>
+</html>
+
+5.INCLUDES:
+------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript String Search</h2>
+
+<p>Check if a string includes "world":</p>
+
+<p id="demo"></p>
+
+<p>The includes() method is not supported in Internet Explorer.</p>
+
+<script>
+let text = "Hello world, welcome to the universe.";
+document.getElementById("demo").innerHTML = text.includes("world");
+</script>
+
+</body>
+</html>
+
+
+
+STRING TAMPLATE
+================
+1.template literals
+2.template strings
+3.string templates
+4.back-tics syntax
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Template Literals</h2>
+
+<p>Template literals use back-ticks (``) to define a string:</p>
+
+<p id="demo"></p>
+
+<p>Template literals are not supported in Internet Explorer.</p>
+
+<script>
+let text = `Hello world!`;
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+==>VARIABLE SUBSTITUTION:
+----------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Template Literals</h2>
+
+<p>Template literals allows variables in strings:</p>
+
+<p id="demo"></p>
+
+<p>Template literals are not supported in Internet Explorer.</p>
+
+<script>
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName}, ${lastName}!`;
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

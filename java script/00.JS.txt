@@ -1,0 +1,198 @@
+JAVA SCRIPT:
+==========
+Java script is one of the most important web development languae.
+Java script can chage the HTML content.
+EXAMPEL:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+
+</body>
+</html>
+
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+
+<img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button>
+
+</body>
+</html>
+
+1.IT CAN CHANGE HTML STYLES:
+--------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change the style of an HTML element.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
+
+</body>
+</html> 
+
+2.IT CAN HIDE HTML ELEMENTS:
+----------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
+
+</body>
+</html> 
+
+3.IT  CAN SHOW HTML ELEMENTS:
+----------------------------------------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can show hidden HTML elements.</p>
+
+<p id="demo" style="display:none">Hello JavaScript!</p>
+
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+
+</body>
+</html> 
+
+WHERE TO:
+=========
+1."SCRIPT" TAG:
+--------------------------
+The java script code can be inserted in between <script> and </script>
+EXMAPLE:
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript in Body</h2>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = "My First JavaScript";
+</script>
+
+</body>
+</html> 
+
+2.JAVA SCRIPT FUNCTIONS AND EVENTS:
+-------------------------------------------------------------
+Function is a block of java script code that can be executed when "called" for.
+The fucntion can be called when an event occurs.
+
+Java script can be write in <head> and <body> block.
+
+=>JS IN HEAD:
+---------------------
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+</head>
+<body>
+<h2>Demo JavaScript in Head</h2>
+
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+</body>
+</html>
+
+=>JS IN BODY:
+---------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo JavaScript in Body</h2>
+
+<p id="demo">A Paragraph</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+</body>
+</html>
+
+3.EXTERNAL JAVASCRIPT:
+--------------------------------------
+=>HTML FILE:
+---------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
+
+<script src="myScript.js"></script>
+
+</body>
+</html>
+
+=>JS FILE:
+--------------
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+
+
+ADVANTAGES OF JAVASCRIPT:
+========================
+== It seperates html and code
+== It makes html and javascript easier to read and maintain
+== Cached javascript files can speed up page loads
+
+COMMENTS:
+==========
+=> SINGLLE LINE COMMENTS:
+----------------------------------------------
+The "//" is used for the single line comments
+
+=>MULTI LINE COMMENTS:
+-------------------------------------------
+The multi line comments are done by "/*" and end with "*/"

@@ -1,0 +1,61 @@
+VARIABLES:
+==========
+There are tootallly three types of varibles:
+	1.var
+	2.let
+	3.const
+1.VAR:
+---------
+This var keyword is the oldest keyword which is used in the period of 1995 to 2015.
+
+2.LET:
+--------
+This let keyword was introduced in 2015
+==variables defined with let cannot be redeclared.
+let x = "John Doe";
+
+let x = 0;
+
+// SyntaxError: 'x' has already been declared
+
+==variables defines with let must be declared before use.
+==variables defined with let have block scope.
+{
+  let x = 2;
+}
+// x can NOT be used here
+
+3.CONST:
+-------------
+The general rule is always declare variable with const.
+==variables declared with const cannot be redeclared
+const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error
+==variables defined with const cannot be reassigned
+==variables defined with const havee block scope
+
+EXAMPELE:
+------------------
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Variables</h1>
+
+<p>In this example, price, price2, and total are variables.</p>
+
+<p id="demo"></p>
+
+<script>
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
+document.getElementById("demo").innerHTML = "The total is: " + total;
+</script>
+
+</body>
+</html>
+
+

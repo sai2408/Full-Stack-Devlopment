@@ -1,0 +1,156 @@
+JAVA SCRIPT EVENTS:
+=================
+Things that happen to HTML elemnts
+
+1.onchange
+2.onclick
+3.onmouseover
+4.onmouseout
+5.onkeydowm
+6.onkeyup
+7.onload
+
+
+1.ONCHANGE:
+---------------------
+An html element has been changed.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Select a new car from the list.</p>
+
+<select id="mySelect" onchange="myFunction()">
+  <option value="Audi">Audi</option>
+  <option value="BMW">BMW</option>
+  <option value="Mercedes">Mercedes</option>
+  <option value="Volvo">Volvo</option>
+</select>
+
+<p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = "You selected: " + x;
+}
+</script>
+
+</body>
+</html>
+
+2.ONCLICK:
+-----------------
+The user clicks an HTML element.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML DOM Events</h1>
+<h2>The onclick Event</h2>
+
+<p>The onclick event triggers a function when an element is clicked on.</p>
+<p>Click to trigger a function that will output "Hello World":</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html>
+
+3.ONMOUSEOVER and MOUSEOUT:
+------------------------------------------------------
+The user moves the mouse over an HTML element.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="smiley.gif" alt="Smiley" width="32" height="32">
+
+<p>The function bigImg() is triggered when the user moves the mouse pointer over the image.</p>
+<p>The function normalImg() is triggered when the mouse pointer is moved out of the image.</p>
+
+<script>
+function bigImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+
+function normalImg(x) {
+  x.style.height = "32px";
+  x.style.width = "32px";
+}
+</script>
+
+</body>
+</html>
+
+4.ONKEYDOWN:
+------------------------
+The user pushes the keyboard key.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+<input type="text" onkeydown="myFunction()">
+
+<script>
+function myFunction() {
+  alert("You pressed a key inside the input field");
+}
+</script>
+
+</body>
+</html>
+
+5.ONKEYUP:
+-------------------
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
+Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+
+6.ONLOAD:
+----------------
+<!DOCTYPE html>
+<html>
+<body onload="myFunction()">
+
+<h1>Hello World!</h1>
+
+<script>
+function myFunction() {
+  alert("Page is loaded");
+}
+</script>
+
+</body>
+</html>
+
