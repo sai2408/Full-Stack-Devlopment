@@ -1,0 +1,28 @@
+CHAR:-
+------
+	-->Fixed length data type	
+	-->static data type(we can not change at run time)
+	-->used to store the charecters and also alpha numeric charecters
+	-->NON-UNICODE mechanism 
+	   ---------------------
+		1 char = 1 byte
+		max size = 8000 bytes
+		at a time it will be able to assign 8000 charecters
+	-->main DRAW BACK is wastage of memory
+
+
+
+
+VARCHAR:-
+-------	
+	-->variable length data type
+	-->dynamic data type(we can change at run time)
+	-->used to store charecters and also alpha numeric charecters
+	-->NON-UNICODE mechanism
+	  -------------------------
+		1 char = 1 byte
+		max size = 8000 bytes
+		max size is 2 gb
+	--main ADVANTAGE is not wastage of memory
+
+

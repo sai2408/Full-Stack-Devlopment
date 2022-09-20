@@ -1,0 +1,45 @@
+CHARECTER DATA TYPES:-
+----------------------
+	-->used to store the string format values
+	-->every string sexpression must br represented with '<string>'
+	-->string expression:-
+	   ------------------
+		=>charecters only
+     			eg:- A to Z (or) a to z
+
+		=>Alphanumeric charecters
+			eg:- A to Z (or) a to z (or) 0 to 9 
+			     (or) special charecters(@,$,#,..) 
+	-->TWO TYPES :-
+		=>NON-UNI CODE data types
+			-->char(size)
+			-->varchar(size)
+			-->varchar(max)
+			-->text
+
+		=>UNI-CODE data types
+			-->nchar(size)
+			-->nvarchar(size)
+			-->nvarchar(max)
+			-->ntext 
+
+NON UNI-CODE DATA TYPES:-
+-----------------------
+	-->When we use to store localized data, we can use this 
+	   non uni-code data
+	-->localized data :-
+	   ---------------
+		=>supports english culture
+	-->These data types will allocate [1 byte = 1 charecter]
+	-->Memory is saved.
+
+UNI-CODE DATA TYPES:-
+--------------------
+	-->When we use to store globalized data, we can use this 
+	   uni-code data
+	-->globalized data :-
+	   ----------------
+		=>Supports all cultures
+		=>N -Represents all national languages
+	-->These data types will allocate [2 bytes = 1 charecter]
+	-->Memory is wasted.

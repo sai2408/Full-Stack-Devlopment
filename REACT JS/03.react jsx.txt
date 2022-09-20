@@ -1,0 +1,112 @@
+REACT JSX:
+=========
+1.jsx
+2.coding jsx
+3.with and without jsx
+4.expressions in jsx
+5.inserting a large block of html
+6.one top level element
+7.attribute_class == Class_name
+8.elements must be closed
+JSX:
+-----
+=>JSX stands for JavaScript XML.
+=>JSX allows us to write HTML in React.
+=>JSX makes it easier to write and add HTML in React.
+
+CODING JSX:
+--------------------
+=>JSX allows us to write HTML elements in JavaScript and place
+     them in the DOM without any createElement()  and/or appendChild() methods.
+=>JSX converts HTML tags into react elements.
+
+=>WITHOUT JSX:
+-------------------------
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myElement = React.createElement('h1', {}, 'I do not use JSX!');
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+=>WITH JSX:
+-------------------
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myElement = <h1>I Love JSX!</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+EXPRESSIONS IN JSX:
+---------------------------------
+=>With JSX you can write expressions inside curly braces { }.
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+INSERTING A LARGE BLOCK OF HTML:
+-----------------------------------------------------------
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myElement = (
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Cherries</li>
+  </ul>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+ONE TOP LEVEL ELEMENT:
+------------------------------------------
+=>The HTML code must be wrapped in ONE top level element.
+import React from 'react';
+import ReactDOM from 'react-do/client';
+
+const myElement = (
+  <div>
+    <h1>I am a Header.</h1>
+    <h1>I am a Header too.</h1>
+  </div>
+);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+ELEMENTS MUST BE CLOSED:
+----------------------------------------------
+=>JSX follows XML rules, and therefore HTML elements must be properly closed.
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myElement = <input type="text" />;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+
+ATTRIBUTE CLASS == CLASS NAME:
+--------------------------------------------------------
+=>The class attribute is a much used attribute in HTML, but since JSX is rendered as 
+     JavaScript, and the class keyword is a reserved word in JavaScript, you are not allowed to use it in JSX.
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myElement = <h1 className="myclass">Hello World</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(myElement);
+
+

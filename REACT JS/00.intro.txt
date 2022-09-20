@@ -1,0 +1,84 @@
+REACT JS:
+========
+React is a JavaScript library for building user interfaces.
+React is used to build single-page applications.
+React allows us to create reusable UI components.
+
+EXAMPLE:
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function Hello(props) {
+  return <h1>Hello World!</h1>;
+}
+
+ReactDOM.render(<Hello />, document.getElementById("root"));
+
+HOW DOES REACT WORK:
+=====================
+=>REACT creates a VIRTUAL DOM in memory.
+=>Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+
+REACT DIRECTLY IN HTML:
+======================
+=>We can use react js in html directly by including three scripts
+	--first two let us write code in javascript
+	--third allows to writr JSX syntax ans ES6 innolder browsers.
+EXAMPLE:
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+
+    <div id="mydiv"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World!</h1>;
+      }
+      
+      ReactDOM.render(<Hello />, document.getElementById('mydiv'))
+    </script>
+
+  </body>
+</html>
+
+SETTING UP A REACT ENVIRONMENT:
+===============================
+=>If you have npx and Node.js installed, you can create a React application by using create-react-app.
+==>Run this command to create a React application named my-react-app:
+	npx create-react-app my-react-app
+==>Run this command to move to the my-react-app directory:
+	cd my-react-app
+==>Run this command to run the React application my-react-app:
+	npm start
+==>MODIFY THE REACT APPLICATION:
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;

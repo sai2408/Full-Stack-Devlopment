@@ -1,0 +1,63 @@
+LISTS IN REACT:
+=============
+=>In React, you will render lists with some type of loop.
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Car(props) {
+  return <li>I am a { props.brand }</li>;
+}
+
+function Garage() {
+  const cars = ['Ford', 'BMW', 'Audi'];
+  return (
+    <>
+	    <h1>Who lives in my garage?</h1>
+	    <ul>
+        {cars.map((car) => <Car brand={car} />)}
+      </ul>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage />);
+
+/*
+If you run this example in your create-react-app,
+you will receive a warning that there is no "key" provided for the list items.
+*/
+
+KEYS:
+---------
+=>Keys allows react to keep the track of  elelemts.
+=> if an item is updated or removed, only that item will be re-rendered instead of the entire list.
+=>Keys need to be unique to each sibling. But they can be duplicated globally.
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Car(props) {
+  return <li>I am a { props.brand }</li>;
+}
+
+function Garage() {
+  const cars = [
+    {id: 1, brand: 'Ford'},
+    {id: 2, brand: 'BMW'},
+    {id: 3, brand: 'Audi'}
+  ];
+  return (
+    <>
+	    <h1>Who lives in my garage?</h1>
+	    <ul>
+        {cars.map((car) => <Car key={car.id} brand={car.brand} />)}
+      </ul>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Garage />);
+

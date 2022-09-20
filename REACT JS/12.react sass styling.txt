@@ -1,0 +1,42 @@
+SASS STYLING:
+============
+=>Sass is a CSS pre-processor.
+=>Sass files are executed on the server and sends CSS to the browser.
+
+CAN I USE SASS?
+-------------------------
+=>If you use the create-react-app in your project, you can easily install and use Sass in your React projects.
+=>Install Sass by running this command in your terminal:
+	>npm i sass
+
+CREATE A SASS FILE:
+----------------------------------
+=>Create a Sass file the same way as you create CSS files, but Sass files have the file extension .scss
+=>In Sass files you can use variables and other Sass functions:
+
+my-sass.scss:
+------------------
+$myColor: red;
+
+h1 {
+  color: $myColor;
+}
+
+index.js:
+-----------
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './my-sass.scss';
+
+const Header = () => {
+  return (
+    <>
+      <h1>Hello Style!</h1>
+      <p>Add a little style!.</p>
+    </>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Header />);

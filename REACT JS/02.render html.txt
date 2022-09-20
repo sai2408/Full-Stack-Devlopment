@@ -1,0 +1,40 @@
+RENDER IN HTML:
+===============
+=>React renders HTML to the web page by using a function called ReactDOM.render().
+
+RENDER FUNCTION:
+-------------------------------
+=>The ReactDOM.render() function takes two arguments, HTML code and an HTML element.
+=>The purpose of the function is to display the specified HTML code inside the specified HTML element.
+=>There is another folder in the root directory of your React project, named "public". In this folder, there is an index.html file.
+EXAMPLE:
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const myelement = (
+  <table>
+    <tr>
+      <th>Name</th>
+    </tr>
+    <tr>
+      <td>John</td>
+    </tr>
+    <tr>
+      <td>Elsa</td>
+    </tr>
+  </table>
+);
+
+ReactDOM.render(myelement, document.getElementById('root'));
+
+ROOT NODE:
+-------------------
+=>The root node is the HTML element where you want to display the result.
+=>It is like a container for content managed by React.
+=>It does NOT have to be a <div> element and it does NOT have to have the id='root':
+EXAMPLE:
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+ReactDOM.render(<p>Hallo</p>, document.getElementById('sandy'));
